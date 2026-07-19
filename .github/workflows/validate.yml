@@ -21,6 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history so `git diff origin/<base>...HEAD` resolves the base ref (a shallow
+          # depth-1 checkout has no merge-base and the diff exits 128).
+          fetch-depth: 0
 
       - name: No workflow may trigger on the dangerous event
         # Enforced by a check, not by a comment: an edit that reintroduces the trigger fails here
