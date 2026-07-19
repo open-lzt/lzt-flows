@@ -80,7 +80,13 @@ jobs:
         # The SAME validator the backend runs (D-6). Installing lzt-flow rather than reimplementing
         # its checks here is what keeps CI's verdict and the backend's identical: a module that
         # passes this step is a module that will import.
-        run: pip install "lzt-flow @ git+https://github.com/open-lzt/auto-lzt.git@main"
+        # lzt-flow pulls pylzt + lzt-eventus via git sources declared in its uv config — invisible to
+        # pip on a transitive dep — so provide the whole chain as explicit direct git references.
+        run: |
+          pip install \
+            "pylzt @ git+https://github.com/open-lzt/pylzt.git@main" \
+            "lzt-eventus[engine] @ git+https://github.com/open-lzt/lzt-eventus.git@main" \
+            "lzt-flow @ git+https://github.com/open-lzt/auto-lzt.git@main"
 
       - name: The author must own the module
         run: python .github/scripts/check_author.py
