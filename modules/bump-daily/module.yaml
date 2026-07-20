@@ -2,7 +2,11 @@ schema_version: 1
 name: bump-daily
 version: 1.0.0
 author: zlexdev
-description: Поднимает все лоты аккаунта — по одному разу за запуск.
+description: >-
+  Поднимает все лоты аккаунта — по одному разу за запуск.
+  Требует явно указанного аккаунта: get_my_lots читает лоты того токена, под которым выполняется,
+  поэтому без привязки он бы листал чужие — и отказывается работать вместо этого.
+  install-flow.sh подставит account_ref сам (--account, либо единственный активный аккаунт).
 requires_nodes:
   - logic.get_my_lots
   - logic.for_each_lot
