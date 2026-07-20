@@ -4,25 +4,55 @@
     {
       "name": "bump-daily",
       "version": "1.0.0",
-      "sha256": "2038c3e792def43f52fc96978a6f6187cac2214cff0e1afe0a1f74659dad76d6",
+      "sha256": "59997e61573e5e21a9b647363fb0b40ecac1a49180476a9a191a6ca60eb8b117",
+      "kind": "flow"
+    },
+    {
+      "name": "fortnite-autobuy",
+      "version": "1.0.0",
+      "sha256": "c6fc2babd9781b00e019e34fe24d95ac9f00934f86290dfab2abf2b5f710ddb7",
       "kind": "flow"
     },
     {
       "name": "notify-pack",
       "version": "1.0.0",
-      "sha256": "c10f87019b3b543e8cafa69974c0fdb877861f45030d5cf9f3df720ca497e88d",
+      "sha256": "6afe441a7f52118611c9cd0f5293f68962eba5326b6153e410969a18ac337b2c",
       "kind": "python"
     },
     {
       "name": "pricing-pack",
       "version": "1.0.0",
-      "sha256": "da84ed2c797bd0a7306c293d3758bb8a5d19a25ec29f7bb2602f52512e7de161",
+      "sha256": "11cff3614ebad8ff1957c6eb1bea1119344018c79bdbbdebba49ed9ee61f84fd",
       "kind": "python"
     },
     {
-      "name": "steam-autobuy",
+      "name": "riot-autobuy",
       "version": "1.0.0",
-      "sha256": "55a3be2f6f60e54c8e75029ddafb2e3ee9bcd80f2e27478d6f466a139ae9ad86",
+      "sha256": "22cfd4580dff69b0906723b2d5945ed8ca82741d37f25dbc4c483ef2c561f106",
+      "kind": "flow"
+    },
+    {
+      "name": "sniper-autobuy",
+      "version": "1.0.0",
+      "sha256": "0be72e79c3d093bfc9f5a9a1a45bb4a94a4ed3d07038e44e440ceecadd741fe1",
+      "kind": "flow"
+    },
+    {
+      "name": "steam-autobuy",
+      "version": "2.1.0",
+      "sha256": "98cf4a6a13b67290de1b799754955091bb2392ba98337118006ae6f60b71f686",
+      "kind": "flow"
+    },
+    {
+      "name": "supercell-autobuy",
+      "version": "1.0.0",
+      "sha256": "bed85313bdfd7f7c149bdbae52b20b4f4b9801497f1db9ed0cfb9016d45fb470",
+      "kind": "flow"
+    },
+    {
+      "name": "telegram-autobuy",
+      "version": "1.0.0",
+      "sha256": "6369806f178ca066e6b1a71747e6ee1eff85a2d234c94bd094e888030dc5b602",
       "kind": "flow"
     }
   ]

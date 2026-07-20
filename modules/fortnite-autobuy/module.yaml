@@ -1,0 +1,15 @@
+schema_version: 1
+name: fortnite-autobuy
+version: 1.0.0
+author: zlexdev
+kind: flow
+description: |-
+  Автопокупка аккаунтов Fortnite по потолку цены.
+  Количество за один прогон ограничивается параметром count.
+  dry_run включён по умолчанию.
+requires_nodes:
+  - market.search
+  - logic.condition
+  - logic.take
+  - logic.for_each_lot
+  - market.fast_buy

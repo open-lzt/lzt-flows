@@ -1,5 +1,5 @@
 {
-  "name": "steam-autobuy",
+  "name": "fortnite-autobuy",
   "entry_node_id": "search",
   "params": [
     {
@@ -7,7 +7,7 @@
       "label": "Цена до",
       "control": "number",
       "required": true,
-      "default": 10,
+      "default": 25,
       "minimum": 1,
       "description": "Потолок цены лота. Фильтрует сам маркет — дороже в выдачу не попадёт."
     },
@@ -16,7 +16,7 @@
       "label": "Сколько купить",
       "control": "number",
       "required": true,
-      "default": 3,
+      "default": 2,
       "minimum": 1,
       "maximum": 50,
       "description": "Сколько лотов взять из выдачи за один прогон."
@@ -39,7 +39,7 @@
           "literal": "{{vars.max_price}}"
         },
         "category": {
-          "literal": "steam"
+          "literal": "fortnite"
         }
       },
       "edges": {

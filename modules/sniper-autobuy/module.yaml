@@ -1,0 +1,15 @@
+schema_version: 1
+name: sniper-autobuy
+version: 1.0.0
+author: zlexdev
+kind: flow
+description: |-
+  Автопокупка в ЛЮБОЙ категории маркета: раздел выбирается параметром, а не зашит в граф.
+  Остальные пять модулей — это он же с предустановленной категорией.
+  Начните с dry_run, посмотрите что попадает в выдачу, и только потом выключайте.
+requires_nodes:
+  - market.search
+  - logic.condition
+  - logic.take
+  - logic.for_each_lot
+  - market.fast_buy

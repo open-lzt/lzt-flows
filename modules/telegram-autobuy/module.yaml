@@ -1,0 +1,15 @@
+schema_version: 1
+name: telegram-autobuy
+version: 1.0.0
+author: zlexdev
+kind: flow
+description: |-
+  Автопокупка Telegram-аккаунтов по потолку цены.
+  Тот же граф, другая категория — узел market.search принимает её параметром.
+  dry_run включён по умолчанию.
+requires_nodes:
+  - market.search
+  - logic.condition
+  - logic.take
+  - logic.for_each_lot
+  - market.fast_buy

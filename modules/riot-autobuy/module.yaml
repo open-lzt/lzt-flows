@@ -1,0 +1,15 @@
+schema_version: 1
+name: riot-autobuy
+version: 1.0.0
+author: zlexdev
+kind: flow
+description: |-
+  Автопокупка аккаунтов Riot — Valorant и League of Legends в одном разделе маркета.
+  Тот же граф, что у steam-autobuy, отличается только категорией поиска.
+  dry_run включён по умолчанию.
+requires_nodes:
+  - market.search
+  - logic.condition
+  - logic.take
+  - logic.for_each_lot
+  - market.fast_buy

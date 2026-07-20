@@ -1,0 +1,15 @@
+schema_version: 1
+name: supercell-autobuy
+version: 1.0.0
+author: zlexdev
+kind: flow
+description: |-
+  Автопокупка аккаунтов Supercell — Brawl Stars, Clash of Clans, Clash Royale.
+  Потолок цены применяет сам маркет, дороже в выдачу не попадёт.
+  dry_run включён по умолчанию.
+requires_nodes:
+  - market.search
+  - logic.condition
+  - logic.take
+  - logic.for_each_lot
+  - market.fast_buy

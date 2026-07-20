@@ -7,6 +7,35 @@
 /import bump-daily — поставить
 ```
 
+Или одной командой на сервере, без бота:
+
+```bash
+wget -qO- https://github.com/open-lzt/open-lzt/raw/main/install-flow.sh | sudo bash
+```
+
+## Что готово
+
+**Автопокупка.** Один и тот же граф — `market.search → logic.condition → logic.take →
+logic.for_each_lot → market.fast_buy` — с разной категорией:
+
+| Модуль | Категория |
+|---|---|
+| `steam-autobuy` | Steam |
+| `riot-autobuy` | Riot — Valorant и League of Legends |
+| `supercell-autobuy` | Supercell — Brawl Stars, Clash of Clans, Clash Royale |
+| `fortnite-autobuy` | Fortnite |
+| `telegram-autobuy` | Telegram |
+| `sniper-autobuy` | любая из 21 — выбирается параметром |
+
+Потолок цены применяет **сам маркет**: узел поиска отдаёт `pmax` в запрос, поэтому лот дороже
+потолка не попадает даже в выдачу, не то что в покупку.
+
+**`dry_run` включён по умолчанию во всех шести.** Флоу пройдёт весь граф и скажет, что купил бы,
+не потратив ничего. Выключайте его, когда посмотрите на выдачу и поверите фильтрам.
+
+**Прочее.** `bump-daily` — ежедневный подъём своих лотов. `notify-pack` и `pricing-pack` — это
+`kind: python`, наборы узлов, а не графы.
+
 ## Что такое модуль
 
 Каталог в `modules/` из двух файлов:

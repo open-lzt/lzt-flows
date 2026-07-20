@@ -1,7 +1,101 @@
 {
-  "name": "steam-autobuy",
+  "name": "sniper-autobuy",
   "entry_node_id": "search",
   "params": [
+    {
+      "key": "category",
+      "label": "Категория",
+      "control": "select",
+      "required": true,
+      "default": "steam",
+      "description": "Раздел маркета, в котором искать.",
+      "options": [
+        {
+          "value": "steam",
+          "label": "Steam"
+        },
+        {
+          "value": "fortnite",
+          "label": "Fortnite"
+        },
+        {
+          "value": "riot",
+          "label": "Riot (Valorant / LoL)"
+        },
+        {
+          "value": "telegram",
+          "label": "Telegram"
+        },
+        {
+          "value": "discord",
+          "label": "Discord"
+        },
+        {
+          "value": "roblox",
+          "label": "Roblox"
+        },
+        {
+          "value": "epicgames",
+          "label": "Epic Games"
+        },
+        {
+          "value": "battlenet",
+          "label": "Battle.net"
+        },
+        {
+          "value": "ea",
+          "label": "EA"
+        },
+        {
+          "value": "escapefromtarkov",
+          "label": "Escape from Tarkov"
+        },
+        {
+          "value": "gifts",
+          "label": "Gifts"
+        },
+        {
+          "value": "instagram",
+          "label": "Instagram"
+        },
+        {
+          "value": "minecraft",
+          "label": "Minecraft"
+        },
+        {
+          "value": "socialclub",
+          "label": "Social Club"
+        },
+        {
+          "value": "supercell",
+          "label": "Supercell"
+        },
+        {
+          "value": "tiktok",
+          "label": "TikTok"
+        },
+        {
+          "value": "uplay",
+          "label": "Uplay"
+        },
+        {
+          "value": "vpn",
+          "label": "VPN"
+        },
+        {
+          "value": "warface",
+          "label": "Warface"
+        },
+        {
+          "value": "hytale",
+          "label": "Hytale"
+        },
+        {
+          "value": "llm",
+          "label": "LLM / AI"
+        }
+      ]
+    },
     {
       "key": "max_price",
       "label": "Цена до",
@@ -16,7 +110,7 @@
       "label": "Сколько купить",
       "control": "number",
       "required": true,
-      "default": 3,
+      "default": 1,
       "minimum": 1,
       "maximum": 50,
       "description": "Сколько лотов взять из выдачи за один прогон."
@@ -39,7 +133,7 @@
           "literal": "{{vars.max_price}}"
         },
         "category": {
-          "literal": "steam"
+          "literal": "{{vars.category}}"
         }
       },
       "edges": {
