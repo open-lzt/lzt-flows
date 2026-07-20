@@ -3,7 +3,7 @@
   "modules": [
     {
       "name": "bump-daily",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "sha256": "2038c3e792def43f52fc96978a6f6187cac2214cff0e1afe0a1f74659dad76d6",
       "kind": "flow"
     },
