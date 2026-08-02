@@ -1,3 +1,5 @@
+<p align="right"><a href="README.en.md">English</a> · <b>Русский</b></p>
+
 # lzt-flows
 
 Каталог готовых модулей для движка автоматизаций [auto-lzt](https://github.com/open-lzt/auto-lzt).
