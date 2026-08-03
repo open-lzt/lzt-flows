@@ -131,9 +131,9 @@ requires_nodes:
 | одна забота на PR | одновременно изменены `authors.yml` и `modules/` |
 | `index.json` не тронут | ручная правка сгенерированного файла |
 | `check_author.py` | `author` в манифесте не совпадает с автором PR или его нет в `authors.yml` |
-| `lzt-flow-validate modules/<name>` | граф не компилируется или ссылается на неизвестный узел |
+| `auto-lzt-validate modules/<name>` | граф не компилируется или ссылается на неизвестный узел |
 
-Валидатор — тот же самый, что стоит на бэкенде: ставится `pip install lzt-flow` из [auto-lzt](https://github.com/open-lzt/auto-lzt).
+Валидатор — тот же самый, что стоит на бэкенде: ставится `pip install auto-lzt` из [auto-lzt](https://github.com/open-lzt/auto-lzt).
 
 Настоящая граница безопасности для кода — не CI, а `CODEOWNERS` плюс защита ветки. Скрипт `check_code_owner.py` только даёт понятную ошибку раньше.
 

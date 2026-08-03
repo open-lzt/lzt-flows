@@ -6,7 +6,7 @@ name: validate
 # branch's workflow with a WRITE token and repository secrets, in the context of a fork's pull
 # request. Every module here arrives as a pull request from a stranger. With `pull_request_target`,
 # opening one against this repo would hand that stranger a write token to the registry every
-# lzt-flow install trusts — one keyword away from supply-chain compromise (R-7).
+# auto-lztinstall trusts — one keyword away from supply-chain compromise (R-7).
 #
 # `pull_request` runs the fork's code with a read-only token and no secrets. The permissions block
 # below says so a second time, because defaults change and this must not.
@@ -77,16 +77,16 @@ jobs:
           python-version: "3.12"
 
       - name: Install the validator
-        # The SAME validator the backend runs (D-6). Installing lzt-flow rather than reimplementing
+        # The SAME validator the backend runs (D-6). Installing auto-lzt rather than reimplementing
         # its checks here is what keeps CI's verdict and the backend's identical: a module that
         # passes this step is a module that will import.
-        # lzt-flow pulls pylzt + lzt-eventus via git sources declared in its uv config — invisible to
+        # auto-lzt pulls pylzt + lzt-eventus via git sources declared in its uv config — invisible to
         # pip on a transitive dep — so provide the whole chain as explicit direct git references.
         run: |
           pip install \
             "pylzt @ git+https://github.com/open-lzt/pylzt.git@main" \
             "lzt-eventus[engine] @ git+https://github.com/open-lzt/lzt-eventus.git@main" \
-            "lzt-flow @ git+https://github.com/open-lzt/auto-lzt.git@main"
+            "auto-lzt @ git+https://github.com/open-lzt/auto-lzt.git@main"
 
       - name: The author must own the module
         run: python .github/scripts/check_author.py
@@ -99,6 +99,6 @@ jobs:
           if [ -z "$changed" ]; then echo "no modules changed"; exit 0; fi
           for name in $changed; do
             echo "::group::$name"
-            lzt-flow-validate "modules/$name"
+            auto-lzt-validate "modules/$name"
             echo "::endgroup::"
           done

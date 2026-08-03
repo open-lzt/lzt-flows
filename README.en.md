@@ -131,9 +131,9 @@ What `.github/workflows/validate.yml` enforces:
 | one concern per PR | `authors.yml` and `modules/` changed together |
 | `index.json` untouched | hand-editing a generated file |
 | `check_author.py` | manifest `author` doesn't match the PR author, or isn't in `authors.yml` |
-| `lzt-flow-validate modules/<name>` | the graph doesn't compile or references an unknown node |
+| `auto-lzt-validate modules/<name>` | the graph doesn't compile or references an unknown node |
 
-The validator is the same one the backend runs: installed via `pip install lzt-flow` from [auto-lzt](https://github.com/open-lzt/auto-lzt).
+The validator is the same one the backend runs: installed via `pip install auto-lzt` from [auto-lzt](https://github.com/open-lzt/auto-lzt).
 
 The real security boundary for code is not CI but `CODEOWNERS` plus branch protection. `check_code_owner.py` only surfaces a readable error earlier.
 
